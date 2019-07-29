@@ -2,7 +2,6 @@ import React from "react";
 import Button from "../../UI/Button/Button"
 
 const OrderSummary = props => {
-    console.log("ingredients", props)
   const ingredientSummary = Object.keys(props.ingredients).map(igKey => {
     return (
       <li key={igKey}>
