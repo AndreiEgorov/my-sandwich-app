@@ -3,10 +3,12 @@ import classes from "./Modal.module.css";
 import Backdrop from "../Backdrop/Backdrop";
 
 class Modal extends React.Component {
-
   //optimizing performance. not rerendering modal if it is not shown
-  shouldComponentUpdate(nextProps, nextStagte){
-    return nextProps.show !== this.props.show
+  shouldComponentUpdate(nextProps, nextStagte) {
+    return (
+      nextProps.show !== this.props.show ||
+      nextProps.children !== this.props.children
+    );
   }
 
   render() {
